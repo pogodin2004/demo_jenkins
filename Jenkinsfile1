@@ -1,0 +1,19 @@
+#!groovy
+properies([disableConcurrentBuilds()])
+
+pipeline {
+    agent all
+        
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("Preparations") {
+            steps {
+                sh 'ssh vagrant@192.168.40.175 \'hostnme\''
+            }
+        }
+    }
+}
+  
