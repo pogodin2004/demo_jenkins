@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage("Preparations") {
             steps {
-                sh 'ssh vagrant@192.168.40.175 \'hostnme\''
+                sh 'ssh vagrant@192.168.40.175 \'hostname\''
             }
         }
     }
