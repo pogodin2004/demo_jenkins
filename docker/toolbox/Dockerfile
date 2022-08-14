@@ -1,0 +1,6 @@
+FROM alipine
+
+RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python pu-pip && \
+    pip install awscli && \
+    apk --purge -v del py-pip
+CMD tail -f /dev/null
