@@ -1,4 +1,4 @@
-FROM alipine
+FROM alpine
 
 RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python pu-pip && \
     pip install awscli && \
